@@ -20,17 +20,18 @@ const APPS_DATA = [
         description: "Bright Sight is an AI-powered classical guitar sight-reading practice application. It generates unlimited MusicXML exercises for Grades 1 through 8 using Google Gemini AI, renders high-fidelity sheet music via OpenSheetMusicDisplay (OSMD), stores exercises in Supabase, and provides synchronized Web Audio metronome playback.",
         features: [
             "AI-generated classical guitar sight-reading exercises tailored for Grades 1–8",
-            "Grade-specific pedagogical rules governing note ranges, positions, and rhythm complexity",
-            "Crisp vector sheet music rendering using OpenSheetMusicDisplay (OSMD)",
-            "Web Audio API metronome playback with adjustable tempo and lead-in clicks",
-            "Cloud exercise library powered by Supabase with search and community sharing"
+            "Pedagogical rules governing note ranges, positions (I–IX), and polyphonic voices",
+            "Interactive Web Audio playalong synthesizer with volume and tempo controls",
+            "Crisp vector sheet music rendering with real-time synchronized playback cursor",
+            "Keyboard hotkey controls (Space for play/pause, Left Arrow to rewind)",
+            "Daily practice goals, streak tracking with celebration confetti, and bookmarking"
         ],
         techStack: ["React", "TypeScript", "Google Gemini AI", "OpenSheetMusicDisplay", "Web Audio API", "Supabase", "Tailwind CSS", "Netlify"]
     },
     {
         id: "score-tone",
         title: "ScoreTone",
-        subtitle: "High-performance PDF sheet music viewer & annotator",
+        subtitle: "Eye-friendly sheet music reader with PDF deep linking & MusicXML spot practice",
         category: "Music & Productivity",
         categoryKey: "music",
         badge: "Musician Essential",
@@ -40,15 +41,16 @@ const APPS_DATA = [
         repoUrl: "https://github.com/catIO/score-tone",
         platform: "PWA & Tablet Optimized",
         status: "Live PWA",
-        description: "ScoreTone is a high-performance, tablet-friendly Progressive Web App (PWA) designed for musicians to view and practice PDF music scores. It provides advanced display color adjustments, instant local file loading, offline caching, and Google Drive integration via Google Picker.",
+        description: "ScoreTone is an eye-friendly, cross-platform sheet music reader and practice companion for musicians. It eliminates stand glare with curated reading palettes and mathematical ink darkening, offers rich display layouts, enables direct URL deep linking into specific score pages, and supports interactive MusicXML playback with measure-based practice looping.",
         features: [
-            "Optimized PDF.js rendering engine designed to handle large scores without browser lag",
-            "Custom eye-strain reduction filters: dark mode, warm sepia, inverted, and high-contrast views",
-            "Offline-first PWA architecture with full local caching and instant resume",
-            "Direct Google Drive cloud picker integration to quickly pull sheet music",
-            "Hands-free and tablet-optimized page-turning interface"
+            "Eye-strain reduction palettes (Warm Paper, Sepia, Ivory, Night Mode, Stage Dim) with mathematical SVG ink darkening for faint scans",
+            "Flexible display options: 2-page landscape side-by-side view, fit-to-width, fit-to-height, and continuous vertical scroll",
+            "Deep linking into PDF and scores: share direct links opening to exact pages and rehearsal marks",
+            "Interactive MusicXML score upload with Web Audio playback and customizable loops for spot practice",
+            "Section bookmarks panel for instant rehearsal navigation and saved practice loop jumping",
+            "Offline-first PWA caching via Dexie IndexedDB; prevents your screen from dimming or locking while reading music"
         ],
-        techStack: ["React", "TypeScript", "PDF.js", "PWA / Service Worker", "Google Drive API", "Tailwind CSS", "Vite", "Netlify"]
+        techStack: ["React", "TypeScript", "PDF.js", "OpenSheetMusicDisplay", "Web Audio API", "PWA / Service Worker", "Google Drive API", "Tailwind CSS", "Vite"]
     },
     {
         id: "practice-mirror",
@@ -65,11 +67,12 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "An offline-first practice tool designed to help musicians record practice sessions for instant self-evaluations or for sharing with teachers via direct YouTube uploads. Captures practice sessions directly in the browser with zero cloud storage footprint.",
         features: [
-            "Latency-free visual mirror mode for real-time study of hand placement, bow positioning, and posture",
-            "High-quality local video recording directly in the browser via MediaStream API",
-            "Client-side video trimming and transcoding powered by WebAssembly (FFmpeg)",
-            "Direct YouTube upload integration with unlisted privacy presets for teacher feedback",
-            "Completely private with local client-side processing and zero server storage"
+            "Zero-latency visual mirror mode to monitor posture, bow arm angle, and hand mechanics",
+            "In-browser video trimming and transcoding powered by client-side WebAssembly (FFmpeg)",
+            "Direct YouTube upload integration with unlisted/private presets for teacher feedback",
+            "Pre-roll recording countdown timer, audio VU level meter, and quick-rewind controls",
+            "Hardware selector for external USB cameras/microphones, plus preview-off battery saver",
+            "100% private and offline-capable with zero cloud storage footprint"
         ],
         techStack: ["Vanilla JavaScript", "WebAssembly (FFmpeg)", "MediaStream API", "YouTube Data API", "Netlify Functions", "PWA"]
     },
@@ -88,11 +91,12 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "Practice Mate is a focused practice timer, routine planner, and logging application for musicians. Designed to cultivate deep focus through Pomodoro intervals, per-piece countdown segment timers, customizable practice routines, and cumulative session analytics.",
         features: [
-            "Pomodoro timer with customizable work and break session durations",
-            "Iteration tracking to log multiple work/break cycles during extensive practice blocks",
-            "Segment timer for per-piece countdowns with daily/weekly goals and overtime mode",
-            "Structured practice plans with intuitive drag-and-drop item reordering",
-            "Comprehensive analytics logging cumulative practice minutes and consistency"
+            "Segment countdown timer for per-piece practice targets with overtime leeway mode",
+            "Structured routine planner with drag-and-drop ordering and rich practice notes",
+            "Repertoire catalog with embedded YouTube reference links and sheet music URLs",
+            "Screen Wake Lock: prevents your screen from dimming or locking while practicing",
+            "Shareable teacher lesson plans and cumulative practice consistency analytics",
+            "Pomodoro interval timer with iteration cycle tracking via drift-free Web Workers"
         ],
         techStack: ["React", "TypeScript", "Vite", "Supabase", "Tailwind CSS", "Web Audio API", "Netlify"]
     },
@@ -111,11 +115,11 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "Spot Practice is a focused passage practice tool for musicians. Upload your MusicXML and MXL scores to isolate specific measure ranges, eliminate reading clutter, and master technically demanding sections through randomized interleaved repetition.",
         features: [
-            "Interactive MusicXML & MXL sheet music rendering",
-            "Spot Mode to isolate 2, 3, 4, 8, or 12-bar measure segments",
-            "Randomized passage selection for interleaved learning",
-            "Full score view with page navigation and zoom controls",
-            "Toggleable measure numbers and distraction-free interface"
+            "Surgically isolates 2, 3, 4, 8, or 12-bar segments from MusicXML and MXL scores",
+            "Randomized interleaved repetition mode to build genuine motor recall",
+            "Interactive vector notation rendered with OpenSheetMusicDisplay (OSMD)",
+            "One-click toggle between isolated bottleneck view and full-score context with zoom",
+            "Distraction-free stand interface with clear measure numbering and zero score clutter"
         ],
         techStack: ["Vanilla JavaScript", "OpenSheetMusicDisplay", "Web Audio API", "PWA", "Netlify"]
     },
@@ -134,11 +138,11 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "Click Up is an advanced tempo progression practice tool based on Molly Gebrian's interleaved learning technique. Designed to help musicians build speed, precision, and motor control by practicing musical measure segments across automated tempo increments with built-in metronome subdivisions.",
         features: [
-            "Interleaved practice method based on Molly Gebrian's cognitive research",
-            "Interactive MusicXML score rendering with measure-based isolation",
-            "Automated incremental tempo builder with customizable bpm steps",
-            "Context cycle variations and structured repetition intervals",
-            "Clean single-screen interface optimized for mobile and tablet stands"
+            "Interleaved tempo progression based on Dr. Molly Gebrian's cognitive neuroscience",
+            "Automated stepped tempo cycles alternating between high-speed bursts and recovery tempos",
+            "Measure-based MusicXML passage isolation with synchronized metronome pacing",
+            "Context cycle variations and automated subdivision shifts between tempo increments",
+            "Single-screen, music-stand-friendly interface for fast BPM adjustments without tension"
         ],
         techStack: ["React", "TypeScript", "MusicXML", "Web Audio API", "PWA", "Tailwind CSS", "Netlify"]
     },
@@ -157,11 +161,11 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "Practice Koh-Pilot is a structured repetition tool designed to help musicians master difficult musical passages. Set custom repetition targets, log consecutive clean executions with instant resets on slip-ups, and maintain steady tempo with an integrated Web Audio metronome.",
         features: [
-            "Target repetition counters with consecutive clean run tracking",
-            "Instant error reset mode to ensure true passage mastery",
-            "Integrated Web Audio metronome with tempo and subdivision controls",
-            "Visual celebration animations upon achieving repetition goals",
-            "Minimalist, distraction-free interface optimized for music stands"
+            "Consecutive clean repetition tracking with instant reset on slip-ups",
+            "Integrated Web Audio metronome with tempo control and beat subdivisions",
+            "Target repetition counters enforcing deliberate practice and stage readiness",
+            "Visual milestone celebration animations upon reaching consecutive mastery goals",
+            "Large high-contrast touch targets optimized for hands-free music stand use"
         ],
         techStack: ["React", "TypeScript", "Vite", "Web Audio API", "Tailwind CSS", "Netlify"]
     },
@@ -205,11 +209,12 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "A modern metronome customized to meet musician needs with everything on one unified screen. Engineered with advanced audio options to provide pleasant, non-fatiguing ticking sounds, complex rhythm subdivisions, and visual beat indicators.",
         features: [
-            "Carefully designed sound library to eliminate auditory fatigue during long practice sessions",
-            "Clean single-screen layout with instant access to tempo, divisions, and sound controls",
-            "Complex meter support, odd time signatures, and polyrhythm subdivision patterns",
-            "High-visibility visual beat animations synchronized with Web Audio timing",
-            "Integrated countdown timer for pacing practice sessions"
+            "Acoustic Web Audio synthesis with lowpass/bandpass filtering to eliminate ear fatigue",
+            "Zero-submenu unified screen with instant access to tempo, meter, and sound profiles",
+            "Complex meter support, odd time signatures, and polyrhythm subdivision matrices",
+            "Shareable URL preset links (encodePresetToUrl) to send rhythm patterns to students",
+            "Tempo percentage scaling and complete configuration backup/restore via JSON",
+            "Screen Wake Lock integration and high-visibility visual beat animations"
         ],
         techStack: ["React", "TypeScript", "Vite", "Web Audio API", "Tailwind CSS", "Lucide Icons", "Netlify"]
     },
@@ -228,11 +233,12 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "A music practice application for learning and practicing scales, modes, and arpeggios. Helps musicians internalize finger patterns, navigate intervals, and build technique with interactive fretboard diagrams and synchronized metronomes.",
         features: [
-            "Interactive scale and mode visualization with custom key and pattern selection",
-            "Clear finger pattern overlays and position shift guides",
-            "Synchronized metronome with automatic tempo ramping for progressive speed building",
-            "Goal setting and session tracking to measure scale fluency",
-            "Modern, distraction-free interface built with dark mode by default"
+            "Dynamic vector sheet music notation modal for every scale powered by ABCJS",
+            "Cycles classical guitar right-hand Spanish finger combinations (i-m, m-a, i-a, p-i-m)",
+            "Smart constrained Fisher-Yates shuffling preventing adjacent-round key repeats",
+            "Calculates daily practice targets automatically from weekly scale volume goals",
+            "Integrated audio metronome with tone adjustment (low/medium/high) and subdivisions",
+            "Customizable scale catalog with calendar streak tracking and confetti celebration"
         ],
         techStack: ["React", "TypeScript", "Vite", "shadcn/ui", "Tailwind CSS", "Lucide Icons", "Netlify"]
     },
@@ -251,10 +257,12 @@ const APPS_DATA = [
         status: "Android",
         description: "A chromatic guitar tuner application with real-time pitch detection. Utilizes the robust YIN pitch detection algorithm to ensure fast, jitter-free frequency recognition even in noisy acoustic environments.",
         features: [
-            "YIN pitch detection algorithm delivering stable, fast fundamental frequency recognition",
-            "Real-time cents deviation meter with smooth needle animations and visual in-tune feedback",
-            "Audio playback engine for generating reference pitch tuning tones",
-            "Standard guitar tuning and chromatic detection across the full musical spectrum",
+            "YIN pitch detection algorithm delivering flutter-free fundamental frequency recognition",
+            "Adjustable A4 reference calibration (400Hz–460Hz) for baroque (415Hz) and modern tunings",
+            "Smooth real-time cents deviation needle with bold color-coded stand visibility",
+            "Battery-saving lifecycle management that pauses audio capture when backgrounded",
+            "Onboard audio tone synthesizer generating reference pitches for ear-training",
+            "Full chromatic detection and standard guitar tuning presets"
         ],
         techStack: ["Flutter", "Dart", "YIN Algorithm", "AudioCapture", "Audioplayers", "Google Fonts"]
     },
@@ -273,11 +281,12 @@ const APPS_DATA = [
         status: "Live PWA",
         description: "Oikaze (追い風 - 'tailwind') is a minimalist weather PWA built with vanilla JavaScript. No frameworks, no build step. Combines multi-signal weather observations, Open-Meteo Air Quality integration, wildfire smoke/haze detection, and convective storm alerting.",
         features: [
-            "Zero-framework, zero-build-step vanilla JavaScript and CSS PWA with offline caching",
-            "Smart weather detection deriving conditions from minutely, hourly, and air quality signals",
-            "Particulate sensing (PM2.5, PM10, US AQI) to detect wildfire smoke and haze conditions",
-            "Convective storm alerts using Lightning Potential Index (LPI) and CAPE with a 2-hour lookahead",
-            "Activity outlook safety recommendations powered by Netlify Edge Functions"
+            "Zero-framework, zero-build vanilla JS PWA (<50KB) with instant offline caching",
+            "Convective storm alerts using CAPE and Lightning Potential Index with 2-hour lookahead",
+            "Live PM2.5/PM10 wildfire smoke sensing with automated hazy condition overrides",
+            "Real-time outdoor activity safety recommendations powered by Netlify Edge Functions",
+            "3-hour barometric pressure trend tracking (rising/falling/steady) and dew point index",
+            "City autocomplete, geolocation support, and multi-unit conversions (knots/mph/inHg)"
         ],
         techStack: ["Vanilla JavaScript", "CSS3", "Service Worker", "Open-Meteo Air Quality API", "Netlify Edge Functions"]
     },
@@ -296,11 +305,12 @@ const APPS_DATA = [
         status: "Live Web App",
         description: "Retrogram is a vintage-inspired square photography gallery. Built with React and Sanity.io, it offers an ultra-clean, read-only gallery connected to the Sanity API-CDN with zero client-side credentials, complemented by an authenticated Sanity Content Studio for visual curation.",
         features: [
-            "Minimalist square-format photo gallery celebrating classic analog and film aesthetics",
-            "High-performance read-only architecture querying Sanity API-CDN with instant image delivery",
-            "Zero client-side secrets or credentials required for public gallery browsing",
-            "Full Sanity Content Studio v3 for hotspot cropping, metadata, and asset management",
-            "Responsive masonry-style square layout with smooth lightbox interactions"
+            "Distraction-free square photography gallery celebrating classic analog aesthetics",
+            "High-performance read-only architecture querying Sanity API-CDN with zero client tokens",
+            "Sanity Content Studio v3 with visual hotspot cropping and date metadata curation",
+            "Keyboard-driven lightbox navigation (arrow keys to browse, Esc to close)",
+            "Vintage Polaroid-inspired analog camera branding with zero ads or vanity metrics",
+            "Responsive square masonry grid optimized for mobile and desktop screens"
         ],
         techStack: ["React", "TypeScript", "Vite", "Sanity.io v3", "Tailwind CSS", "Netlify"]
     }
