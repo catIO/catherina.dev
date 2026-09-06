@@ -154,7 +154,7 @@
                     </div>
                     <div class="modal-actions">
                         <a href="${escapeHtml(app.appUrl)}" target="_blank" rel="noopener noreferrer" class="modal-btn-launch">
-                            <span>Open Application</span>
+                            <span>${app.appUrl.includes('github.com') ? 'View on GitHub' : 'Open Application'}</span>
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15 3 21 3 21 9"></polyline>
