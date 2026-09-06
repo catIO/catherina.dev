@@ -7,12 +7,15 @@ An App Store showcase and launchpad for web applications, progressive web apps, 
 1. **Bright Sight** — AI-powered classical guitar sight-reading practice app (Grades 1–8) with OSMD rendering and Web Audio metronome.
 2. **ScoreTone** — High-performance, tablet-friendly PDF sheet music viewer PWA with eye-strain reduction filters and Google Drive integration.
 3. **Practice Mirror** — Latency-free visual feedback and practice recording with client-side WebAssembly FFmpeg trimming and direct YouTube uploads.
-4. **Practice Timer** — Structured Pomodoro interval timer, per-piece segment goals, routine planner, and practice logging.
-5. **Rhythm Weaver** — All-in-one metronome with acoustically tuned, non-fatiguing ticks, polyrhythms, and visual beat indicators.
-6. **Scaled** — Interactive music practice companion for mastering scales, modes, arpeggios, and finger patterns.
-7. **Pitch Mate** — Chromatic instrument tuner powered by the robust YIN pitch detection algorithm.
-8. **Oikaze** — Minimalist Japanese-inspired weather PWA with Open-Meteo air quality and convective storm alerts.
-9. **Retrogram** — Retro square-format photo gallery connected to Sanity.io CMS and read-only API-CDN.
+4. **Practice Mate** — Focused Pomodoro interval timer, per-piece segment countdowns, routine planner, and practice logging.
+5. **Spot Practice** — Focused MusicXML score passage isolation and randomized repetition practice tool.
+6. **Click Up** — Advanced interleaved tempo progression and speed-building tool based on Molly Gebrian's cognitive research.
+7. **Practice Koh-Pilot** — Structured repetition tracker and passage mastery tool with integrated metronome pacing.
+8. **Rhythm Weaver** — All-in-one metronome with acoustically tuned, non-fatiguing ticks, polyrhythms, and visual beat indicators.
+9. **Scaled** — Interactive music practice companion for mastering scales, modes, arpeggios, and finger patterns.
+10. **Pitch Mate** — Chromatic instrument tuner powered by the robust YIN pitch detection algorithm.
+11. **Oikaze** — Minimalist Japanese-inspired weather PWA with Open-Meteo air quality and convective storm alerts.
+12. **Retrogram** — Retro square-format photo gallery connected to Sanity.io CMS and read-only API-CDN.
 
 ## Features
 

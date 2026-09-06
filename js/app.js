@@ -113,7 +113,14 @@
 
     // Modal Sheet Management
     function openAppModal(appId, updateHash = true) {
-        const app = APPS_DATA.find(a => a.id === appId);
+        const aliases = { 
+            'practice-timer': 'practice-mate', 
+            'practice-koh-pilot': 'koh-pilot', 
+            'spot': 'spot-practice',
+            'planning-mate': 'practice-planner'
+        };
+        const targetId = aliases[appId] || appId;
+        const app = APPS_DATA.find(a => a.id === targetId);
         if (!app) return;
 
         activeModalApp = app;
