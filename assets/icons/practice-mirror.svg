@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e37"/>
+      <stop offset="100%" stop-color="#0e1014"/>
+    </linearGradient>
+    <radialGradient id="radialGlow" cx="50%" cy="18%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.09"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glyphGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e4e8f0"/>
+    </linearGradient>
+    <filter id="glyphShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4.096" stdDeviation="6.144" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#darkBg)"/>
+  <rect width="512" height="512" fill="url(#radialGlow)"/>
+  <line x1="0" y1="1" x2="512" y2="1" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1.5"/>
+  <g transform="translate(107.52000000000001, 404.48) scale(0.3093333333333333)" filter="url(#glyphShadow)"><path d="M458.15-603.59h313.07q-28.44-67.08-81.9-114.43-53.47-47.35-124.75-67.35L458.15-603.59Zm-96.3 79.52L518.5-793.85q-9.57-1.52-19.25-2.4-9.68-.88-19.25-.88-65.76 0-122.4 25t-100.17 66.76l104.42 181.3ZM172.87-400H383.7L227.28-670.02q-30.56 40.52-47.49 87.99-16.92 47.46-16.92 102.03 0 20.04 2.74 40.86 2.74 20.81 7.26 39.14Zm222.56 225.37 104.42-181.78H188.78q27 66.37 81.19 114.07 54.18 47.71 125.46 67.71ZM480-162.87q66 0 122.28-24.88 56.29-24.88 100.29-66.88L597.91-436.65 441.5-166.15q9.57 1.52 18.75 2.4 9.18.88 19.75.88Zm252.72-127.11q29.85-38.85 47.13-86.91 17.28-48.07 17.28-103.11 0-21-2.5-40.74-2.5-19.74-7.5-39.26H576.3l156.42 270.02ZM480-480Zm0 408.13q-83.67 0-158.11-32.22-74.43-32.21-130.01-87.79-55.58-55.58-87.79-130.01Q71.87-396.33 71.87-480q0-84.43 32.22-158.49 32.21-74.05 87.79-129.63 55.58-55.58 130.01-87.79 74.44-32.22 158.11-32.22 84.43 0 158.49 32.22 74.05 32.21 129.63 87.79 55.58 55.58 87.79 129.63 32.22 74.06 32.22 158.49 0 83.67-32.22 158.11-32.21 74.43-87.79 130.01-55.58 55.58-129.63 87.79Q564.43-71.87 480-71.87Z" fill="url(#glyphGrad)"/></g>
+</svg>
