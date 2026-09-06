@@ -167,7 +167,7 @@ const APPS_DATA = [
     {
         id: "oikaze",
         title: "Oikaze",
-        subtitle: "Minimalist Japanese-inspired weather PWA with air quality & storm detection",
+        subtitle: "Minimalist weather app with air quality & storm detection",
         category: "Weather & Lifestyle",
         categoryKey: "tools",
         badge: "Zero Build PWA",
