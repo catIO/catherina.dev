@@ -14,7 +14,7 @@ An App Store showcase and launchpad for web applications, progressive web apps, 
 8. **Rhythm Weaver** — All-in-one metronome with acoustically tuned, non-fatiguing ticks, polyrhythms, and visual beat indicators.
 9. **Scaled** — Interactive music practice companion for mastering scales, modes, arpeggios, and finger patterns.
 10. **Pitch Mate** — Chromatic instrument tuner powered by the robust YIN pitch detection algorithm.
-11. **Oikaze** — Minimalist Japanese-inspired weather PWA with Open-Meteo air quality and convective storm alerts.
+11. **Oikaze** — Minimalist weather PWA with on-demand Doppler radar, NWS airport consensus, air quality, and convective storm alerts.
 12. **Retrogram** — Retro square-format photo gallery connected to Sanity.io CMS and read-only API-CDN.
 
 ## Features

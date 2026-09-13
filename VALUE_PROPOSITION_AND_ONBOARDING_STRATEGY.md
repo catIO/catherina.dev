@@ -478,23 +478,28 @@ Oikaze is a **clean, ad-free atmospheric intelligence PWA**:
 
 #### Codebase Insights & Technical Differentiation
 - **Zero-Dependency Architecture**: Pure vanilla JS, CSS3, and Service Worker PWA with zero build step and instant offline caching.
-- **Multi-Signal Atmospheric Fusion**: Synthesizes live National Weather Service (NWS) station telemetry, Open-Meteo models, and live WAQI station air quality feeds.
+- **On-Demand Live Doppler Radar**: Interactive RainViewer radar layer loaded dynamically via Leaflet.js strictly during active or imminent precipitation, incurring zero dry-weather network overhead.
+- **Multi-Station NWS Ground Consensus**: Scans raw METAR and present-weather telemetry across neighboring NWS stations to catch localized rain even when primary airport gauges are degraded.
 - **Convective Lookahead**: Evaluates CAPE (Convective Available Potential Energy) and LPI (Lightning Potential Index) to flag severe storm development hours before radar rain reflects.
 - **Smoke & Haze Overrides**: Overrides clear sky codes when PM2.5 particulate levels spike, displaying smoke conditions and outdoor activity warnings.
-- **Differentiation vs. Alternatives**: Provides **uncompromised atmospheric physics (CAPE, LPI, PM2.5 smoke)** in a lightning-fast, zero-tracker PWA.
+- **Zero Background Resource Waste**: Radar animation and in-tab checks freeze when backgrounded or blurred; no polling occurs when hidden.
+- **Differentiation vs. Alternatives**: Provides **uncompromised atmospheric physics, live Doppler radar, and NWS ground truth** in a lightning-fast, zero-tracker PWA.
 
 #### Ready-to-Use Copy for About Page / Catalog
-> **Tagline**: Minimalist weather intelligence with convective storm lookahead and wildfire smoke detection.  
+> **Tagline**: Minimalist weather intelligence with live Doppler radar, convective storm lookahead, and wildfire smoke detection.  
 > **Problem**: Mainstream weather apps are bloated with ads and trackers, fail to warn of sudden thunderstorms, and miss dangerous wildfire smoke.  
-> **Solution**: A zero-build, ultra-light PWA that detects convective storms 2 hours ahead using atmospheric physics (CAPE & LPI) and tracks live PM2.5 wildfire smoke with outdoor activity safety guidance.  
-> **Differentiation**: Pure atmospheric physics with zero ads, zero tracking, and instant offline caching.
+> **Solution**: A zero-build, ultra-light PWA that loads live Doppler radar on demand, detects convective storms 2 hours ahead using atmospheric physics (CAPE & LPI), and tracks live PM2.5 wildfire smoke with outdoor activity safety guidance.  
+> **Differentiation**: Pure atmospheric physics, multi-station NWS consensus, and live radar with zero ads, zero tracking, and instant offline caching.
 
 
 
 #### Updated Key Features (Code-Verified)
 - Zero-Build, Zero-Framework PWA: Ultra-lightweight vanilla JS/CSS architecture (<50KB) with instant offline service worker caching.
+- On-Demand Live Doppler Radar: Interactive RainViewer animated radar map with scrubber timeline and fullscreen overlay, loaded only during precipitation.
+- Multi-Station NWS Consensus: Ingests raw NOAA/METAR data from nearest stations to eliminate model lag and detect precipitation accurately.
 - Convective Storm Alert Lookahead: Evaluates CAPE and Lightning Potential Index (LPI) to warn of thunderstorms 2 hours ahead.
 - Live Wildfire Smoke & PM2.5 Detection: Integrates Open-Meteo and live WAQI station air quality feeds to detect particulate haze.
+- Power & Lifecycle Optimization: Halts animations and polling on window blur/tab hide to preserve battery.
 - Activity Outlook Recommendations: Real-time outdoor exercise safety guidance powered by Netlify Edge Functions.
 - 3-Hour Barometric Pressure Trend: Tracks pressure shifts (rising/falling/steady) alongside dew point and UV indices.
 - Global Search, Geolocation & Unit Toggles: City autocomplete, device geolocation, and full conversions (°F/°C, knots/mph, inHg/hPa).

@@ -269,7 +269,7 @@ const APPS_DATA = [
     {
         id: "oikaze",
         title: "Oikaze",
-        subtitle: "Minimalist weather app with air quality & storm detection",
+        subtitle: "Minimalist weather app with live radar, air quality & storm detection",
         category: "Weather & Lifestyle",
         categoryKey: "tools",
         badge: "Zero Build PWA",
@@ -279,16 +279,18 @@ const APPS_DATA = [
         repoUrl: "https://github.com/catIO/weather",
         platform: "PWA (Zero Dependencies)",
         status: "Live PWA",
-        description: "Oikaze (追い風 - 'tailwind') is a minimalist weather PWA built with vanilla JavaScript. No frameworks, no build step. Combines multi-signal weather observations, Open-Meteo Air Quality integration, wildfire smoke/haze detection, and convective storm alerting.",
+        description: "Oikaze (追い風 - 'tailwind') is a minimalist weather PWA built with vanilla JavaScript. No frameworks, no build step. Combines multi-signal weather observations, multi-station NOAA/NWS consensus, on-demand live Doppler radar, Open-Meteo Air Quality integration, wildfire smoke/haze detection, and convective storm alerting.",
         features: [
             "Zero-framework, zero-build vanilla JS PWA (<50KB) with instant offline caching",
+            "Dynamic live Doppler radar map powered by RainViewer & Leaflet, loaded on-demand during active precipitation",
+            "Multi-station NOAA/NWS observation consensus to detect localized rain even with degraded airport gauges",
             "Convective storm alerts using CAPE and Lightning Potential Index with 2-hour lookahead",
             "Live PM2.5/PM10 wildfire smoke sensing with automated hazy condition overrides",
-            "Real-time outdoor activity safety recommendations powered by Netlify Edge Functions",
+            "Zero background battery drain: radar animation and polling freeze when tab is hidden or blurred",
             "3-hour barometric pressure trend tracking (rising/falling/steady) and dew point index",
             "City autocomplete, geolocation support, and multi-unit conversions (knots/mph/inHg)"
         ],
-        techStack: ["Vanilla JavaScript", "CSS3", "Service Worker", "Open-Meteo Air Quality API", "Netlify Edge Functions"]
+        techStack: ["Vanilla JavaScript", "CSS3", "Service Worker", "Open-Meteo API", "NOAA / NWS API", "RainViewer Radar API", "Leaflet.js", "Netlify Edge Functions"]
     },
     {
         id: "retrogram",
