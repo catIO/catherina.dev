@@ -85,7 +85,7 @@ const APPS_DATA = [
         badge: "Productivity",
         icon: "assets/icons/practice-mate.png",
         rating: "4.9",
-        appUrl: "https://timer.practice-mate.app/",
+        appUrl: "https://practice-mate.app/",
         repoUrl: "https://github.com/catIO/practice-timer",
         platform: "Web & Mobile",
         status: "Live Web App",

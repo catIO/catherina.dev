@@ -616,5 +616,5 @@ When transitioning these applications from personal tools to products marketed t
 ### 4. The Practice Mate Ecosystem Banner
 - Cross-promote the music tools under a unified brand header or footer:
   > **Part of the Practice Mate Suite for Musicians**  
-  > [Timer & Routines](https://timer.practice-mate.app/) • [Sheet Music Reader](https://score.practice-mate.app/) • [Sight-Reading](https://bright-sight.app/) • [Passage Isolation](https://spot.practice-mate.app/) • [Speed Builder](https://clickup.practice-mate.app/) • [Metronome](https://rhythm.practice-mate.app/) • [Repetition Coach](https://koh.practice-mate.app/) • [Scale Companion](https://scaled.practice-mate.app/)
+  > [Timer & Routines](https://.ractice-mate.app/) • [Sheet Music Reader](https://score.practice-mate.app/) • [Sight-Reading](https://bright-sight.app/) • [Passage Isolation](https://spot.practice-mate.app/) • [Speed Builder](https://clickup.practice-mate.app/) • [Metronome](https://rhythm.practice-mate.app/) • [Repetition Coach](https://koh.practice-mate.app/) • [Scale Companion](https://scaled.practice-mate.app/)
 - This creates instant brand legitimacy, keeps users within your ecosystem, and multiplies the value of every individual tool.
