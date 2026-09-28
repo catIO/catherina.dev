@@ -117,7 +117,9 @@
             'practice-timer': 'practice-mate', 
             'practice-koh-pilot': 'koh-pilot', 
             'spot': 'spot-practice',
-            'planning-mate': 'practice-planner'
+            'planning-mate': 'practice-planner',
+            'audio-mate': 'play-mate',
+            'playmate': 'play-mate'
         };
         const targetId = aliases[appId] || appId;
         const app = APPS_DATA.find(a => a.id === targetId);

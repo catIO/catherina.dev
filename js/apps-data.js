@@ -243,6 +243,31 @@ const APPS_DATA = [
         techStack: ["React", "TypeScript", "Vite", "shadcn/ui", "Tailwind CSS", "Lucide Icons", "Netlify"]
     },
     {
+        id: "play-mate",
+        title: "Play Mate",
+        subtitle: "Universal home audio control surface & CD metadata companion",
+        category: "Music & Hardware",
+        categoryKey: "music",
+        badge: "Hi-Fi Control",
+        icon: "assets/icons/play-mate.png",
+        rating: "4.9",
+        appUrl: "https://github.com/catIO/audio-mate",
+        repoUrl: "https://github.com/catIO/audio-mate",
+        platform: "Flutter & ESP32",
+        status: "Android & Hardware",
+        description: "Universal control surface for physical home audio equipment. Bridges modern mobile interfaces to hi-fi hardware via a local ESP32 IR bridge, featuring a multi-tier metadata pipeline (iTunes & MusicBrainz/Cover Art Archive) for instant 1400x1400 artwork, exact track durations, barcode search, and multi-device remote control.",
+        features: [
+            "Multi-tier metadata engine: ultra-fast iTunes Search & Lookup API for 1400x1400 artwork and millisecond track durations, with Netlify edge-cached MusicBrainz & Cover Art Archive fallback",
+            "Barcode & UPC scanning support to instantly identify physical CDs and populate complete tracklists",
+            "Extensible device adapter architecture supporting CD players (FiiO DM15), active speakers (Klipsch), and amplifiers",
+            "Local ESP32 Wi-Fi to infrared bridge for low-latency hardware transport without cloud dependencies",
+            "Smart CD playback synchronization with track duration estimation, wall-clock catch-up, and auto-wake track jumping",
+            "Unified universal remote screen with multi-device switcher, input selector, and volume sliders",
+            "Offline-first local library and device configuration powered by Drift SQLite and Riverpod"
+        ],
+        techStack: ["Flutter", "Dart", "ESP32 / Arduino C++", "iTunes Search API", "MusicBrainz API", "Cover Art Archive", "Netlify Functions", "Drift (SQLite)", "Riverpod"]
+    },
+    {
         id: "pitch-mate",
         title: "Pitch Mate",
         subtitle: "Chromatic instrument tuner powered by YIN pitch detection",
